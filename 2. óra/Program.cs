@@ -12,7 +12,29 @@ A kódot az azt olvasó ember számára írjuk (1-szer írnak minden kódot, de 
 Új fejlesztéseket gyorsan lekódolni (pl. startupoknál) -> jól fejleszthető kódot kell írni, alkalmasat változásokra.
 Tehát a gyorsaság nem elsődleges szermpont mostmár!
 
-TODO konkrétumok leírása ide :)
+Struktúra: egymáshoz tartozó adatok halmaza:
+class Szervezo{public int kezd,veg;}
+
+Osztály (class): egymáshoz tartozó adatok *és viselkedés* halmaza:
+class Szervezo{
+  private int kezd;
+  private int veg;
+  public Szervezo(int a, int b){
+    this.kezd = a;
+    this.veg = b;
+  }
+  public bool Raer(int ora){
+    return this.kezd <= ora && ora < veg;
+  }
+}
+public Szervezo(...): konstruktor
+  - első dolog, ami meghívódik
+  - használat: new Szervezo(...), Szervezo-vel tér vissza
+  - nincs visszatérési típus *jelölve*
+Raer: metódus; az objektumhoz tartozó viselkedés
+Egy metódusnévhez (vagy konstruktorhoz) tartozhat több metódus,
+HA megkülönböztethető a paraméterlista alapján
+TODO folytatás
 
 */
 using System;
