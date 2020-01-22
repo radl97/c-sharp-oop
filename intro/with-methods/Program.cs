@@ -90,7 +90,7 @@ namespace HelloVilag
 
             // Üres dinamikus tömb készítése:
             List<string> szinek = new List<string>();
-            // Lista/tömb hossza: szinek.Capacity.
+            // Lista/tömb hossza: szinek.Count (NEM Capacity!!).
 
             // cw<tab><tab>
             Console.WriteLine("Írd ki a kedvenc színeid, minden sorba egyet!");
