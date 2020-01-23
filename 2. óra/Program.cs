@@ -118,10 +118,28 @@ HF2: Rekonstruálni a lenti kódot. Egy folyamatként mutattam be az OOP lényeg
   Pozitívuma, hogy nem lehet nagyon elakadni, végső soron ctrl+c ctrl+v "megoldása" a házinak.
 
 HF3: (ajánlott) Egy, az ehhez a feladathoz hasonlót szeretnék adni, amit az előző kód alapján meg lehet oldani.
-  TODO
+  Egy olyan alkalmazást tervezünk, ami segítségével egy társaság a költekezését tudja követni.
+  Az ötlet, hogy mindenki a vonaton beledob egy közös kasszába (ugyanannyi) pénzt, utána mindent ebből költenek.
+  Mindig felírják az applikációba, hogy ki mit/mennyit vett, amit az applikáció menedzsel.
+  A pénzügyekkel nyaralás végén az applikáció összeállít egy tartozási gráfot (ki kinek mennyivel tartozik), és egy statisztikát.
+  (ötlet a Splitwise alkalmazás alapján :) )
 
-HF4: Egy gondolattal bonyolultabb feladat...?
-  TODO
+  A feladatunk az összeállítás részében pár statisztikai adat készítése.
+  Adottak rendelések, amik tartalmazzák a vevő nevét, a vásárolt termék árát és a mennyiségét (egész szám), és a vétel idejét (hanyadik napja a nyaralásnak/óra/perc/másodperc).
+  Ezeket az adatokat már vevő szerint szétbontva kapjuk meg.
+  A bemenettel nem kell foglalkozni, úgy tehetjük struktúrába, ahogy szeretnénk.
+  1. feladat: Adjuk meg, hogy ki az, aki legtöbbször rendelt!
+  2. feladat: Adjuk meg, hogy mennyit költött Feri, az egyes sorszámú személy.
+  3. feladat: Írjuk ki, hogy ki az, aki biztosan nem fog tartozni senkinek, hiszen ő költött a legtöbbet.
+HF4: Algoritmikusan bonyolultabb feladat :)
+  HF3 bővítése: Adjunk meg egy egyszerűsített tartozási gráfot.
+  Egyszerűsítettnek tekintjük a gráfot, ha kevesebb, mint N él van benne, és nincs tranzitív tartozás (azaz Anna tartozik Bélának és Béla tartozik Cecilnek)
+  Belátható, hogy mindig van ilyen gráf.
+  Kimenet: Ki kinek mennyivel tartozik.
+  CSOKIT ÉRŐ FELADAT
+    feltételek:
+      hatékonyan van implementálva (memóriaigény bármilyen lehet, futási idő ne nőjjön a felhasználók számával sokat)
+      A 3. feladat kész van teljesen
 
 HF5: (előretekintés, utánanézős) interface definiálása, két külön szervező osztály közös használatához.
   Mese: A Szervezo és Szervezo2 ugyanazt a célt szolgálják, mindkettő saját előnyeivel és hátrányaival.
