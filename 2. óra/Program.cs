@@ -102,12 +102,17 @@ Házi:
 
 több házit adok, próbálok a legkönnyebtől fokozatosan nehezedő házikat adni.
 Ezekből egyet, vagy kettőt lehet érdemes csinálni.
-HF1: befejezni a második feladatot. Az első feladat nagyon sok segítséget ad ebben.
+HF1*: Pár kisebb/nagyobb módosítást/bővítést kíván ezen a kódon, a fejleszthetőséget és az elkülönített felelősséget próbálja bemutatni.
+
+HF1a: befejezni a második feladatot. Az első feladat nagyon sok segítséget ad ebben.
 
 HF1b: SzervezoManager osztály létrehozása, ami kezeli valamilyen formában a szervezőket.
 Tanácsok:
   Nem érdemes egyből beletenni az összes szervezőt. (AddSzervezo használatával lehet újat belerakni)
   Csak a számunkrw fontos kérdéseket vezessük ki: (IsAllTimeGood, IsEveryoneNeeded)
+
+HF1c: azokat a szervezőket, akik mindenképp kellenek (Első házi 2. feladat szerint), írjuk ki név szerint.
+  --> legyen neve a szervezőnek, ezt is adjuk meg.
 
 HF2: Rekonstruálni a lenti kódot. Egy folyamatként mutattam be az OOP lényegét. Vagy a folyamaton végigmenve, vagy csak a végleges kódot rekonstruálni sok hasznot rejthet.
   Pozitívuma, hogy nem lehet nagyon elakadni, végső soron ctrl+c ctrl+v "megoldása" a házinak.
