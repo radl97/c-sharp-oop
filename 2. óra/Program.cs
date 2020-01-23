@@ -27,14 +27,69 @@ class Szervezo{
     return this.kezd <= ora && ora < veg;
   }
 }
+
+Metódusokban, konstruktorokban "this"-szel lehet hivatkozni az adott példányra.
+  Pl. this.kezd
+Gyakorlatilag 0. paraméter (nyelv konkrétan így működik)
+A this kulcsszó elhagyható (ha nincs névütközés): this.kezd -> kezd
+
 public Szervezo(...): konstruktor
-  - első dolog, ami meghívódik
-  - használat: new Szervezo(...), Szervezo-vel tér vissza
-  - nincs visszatérési típus *jelölve*
+  - első dolog, ami meghívódik példány létrehozásakor,
+      inicializáció szerepű
+  - használat: new Szervezo(...), egy új Szervezo-vel tér vissza
+      példányosítás
+  - nincs visszatérési típus *jelölve* (public void Szervezo helyett simán public Szervezo)
+  - Csak éppen létrejövő példánynál van értelme, this-en keresztül érhető el a referenciája ennek.
 Raer: metódus; az objektumhoz tartozó viselkedés
+  - Van egy referenciája a példányhoz, csak példányhoz kötve értelmezhető a működése
+  - Használat: szervezi.Raer(...)
+
 Egy metódusnévhez (vagy konstruktorhoz) tartozhat több metódus,
 HA megkülönböztethető a paraméterlista alapján
+
+Ezek bevezetésével nem használjuk az adattagokat kívülről.
+Ezért privátnak jelölhetjük: csak az osztály metódusai érik el az adattagokat.
+public int kezd; -> private int kezd;
+
+Általában minden adattag privát lesz, később kap értelmet ez az ökölszabály.
+
+A következő lépés egy új feladathoz kötődött: (változó követelmények)
+Van olyan szervező, aki nem folytonos intervallumban ér rá (közepén meg kell tartani egy óráját).
+Ebben lesz az igazi ereje a megközelítésnek:
+Kizárólag a Szervezo osztályt kell kicserélni (didaktikai célból egy másik, Szervezo2 osztályt hoztam létre)
+
+A megoldásban minden szervező minden órában elmondja, hogy ráér vagy nem.
+Tehát minden szervezőre 5 igaz/hamis értéket tárolunk.
+(Megjegyzés: a lenti kód egy 0. elemet is tárol, ami mindig hamis, hogy egytől indexeljünk...
+Lehetne szebb is ez a rész :) )
+Ez az eredeti egy intervallumot is tudja reprezentálni, meg az új eseteket is.
+
+A Szervezo2 metódusai:
+  - Szervezo2(int kezd, int veg)
+    Azonos név, nincs adattípus -> konstruktor
+    Az eredeti esetet és használatot fedi le
+
 TODO folytatás
+
+több házit adok, próbálok a legkönnyebtől fokozatosan nehezedő házikat adni.
+Ezekből egyet, vagy kettőt lehet érdemes csinálni.
+HF1: befejezni a második feladatot. Az első feladat nagyon sok segítséget ad ebben.
+
+HF2: Rekonstruálni a lenti kódot. Egy folyamatként mutattam be az OOP lényegét. Vagy a folyamaton végigmenve, vagy csak a végleges kódot rekonstruálni sok hasznot rejthet.
+  Pozitívuma, hogy nem lehet nagyon elakadni, végső soron ctrl+c ctrl+v "megoldása" a házinak.
+
+HF3: (ajánlott) Egy, az előzőhöz hasonlót szeretnék adni, amit az előző kód alapján meg lehet oldani.
+  TODO
+
+HF4: (előretekintés, utánanézős) interface definiálása, két külön szervező osztály közös használatához.
+  Mese: A Szervezo és Szervezo2 ugyanazt a célt szolgálják, mindkettő saját előnyeivel és hátrányaival.
+    Mindkettőt ki lehet aknázni: alapvetően használjuk a Szervzo-t, de ha szükség van rá, akkor a Szervezo2-t használjuk.
+
+
+Amikről várhatóan lesz szó köv. alkalommal:
+  interfész/implementáció
+  leszármazás
+  OOP ökölszabályok
 
 */
 using System;
