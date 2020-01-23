@@ -1,22 +1,29 @@
 /*
 2. óra:
+
+Menete:
+
 HF Megbeszélése
 break, return működése "élesben"
+
+1. lépés:
+
 Egymáshoz tartozó adatok együtt tárolása -> struktúra
-struktúra + viselkedések (metódusok) együtt tárolása -> objektum -> Objektumorientált programozás
+struktúra + viselkedések (metódusok) együtt tárolása -> objektum -> Objektumorientált programozás (OOP)
 Másképp: Adat + viselkedés -> egy felelősség -> egy objektum (Single Responsibility Principle)
 
 OOP alapvető elve:
 Nem a fordítónak/gépnek írjuk a kódot, a fordító okos (nagyon!).
 A kódot az azt olvasó ember számára írjuk (1-szer írnak minden kódot, de 100+ alkalommal olvassák).
-Új fejlesztéseket gyorsan lekódolni (pl. startupoknál) -> jól fejleszthető kódot kell írni, alkalmasat változásokra.
-Tehát a gyorsaság nem elsődleges szermpont mostmár!
+Új fejlesztéseket gyorsan kell lekódolni (pl. startupoknál) -> jól fejleszthető kódot kell írni, alkalmasat változásokra.
+Tehát a futás gyorsasága, memóriaigénye nem elsődleges szermpont mostmár!
 
-Struktúra: egymáshoz tartozó adatok halmaza:
+Struktúra (van C#-ban talán, de nem igazán használt): egymáshoz tartozó adatok halmaza:
 class Szervezo{public int kezd,veg;}
 
 Osztály (class): egymáshoz tartozó adatok *és viselkedés* halmaza:
-class Szervezo{
+
+class Szervezo {
   private int kezd;
   private int veg;
   public Szervezo(int a, int b){
@@ -66,31 +73,63 @@ Ez az eredeti egy intervallumot is tudja reprezentálni, meg az új eseteket is.
 
 A Szervezo2 metódusai:
   - Szervezo2(int kezd, int veg)
-    Azonos név, nincs adattípus -> konstruktor
-    Az eredeti esetet és használatot fedi le
+    Azonos név, nincs adattípus -> konstruktor.
+    Az eredeti esetet és használatot fedi le.
+    Minden órát megjelöl [kezd;veg) intervallumban
+  - Szervezo2(List<bool> raer)
+    konstruktor
+    Minden időpontra egy i/h érték, hogy ráér-e
+    Gyakorlatilag a tömb másolása kell csak.
+  - Raer(int ora)
+    Csak egy tömbelérés :)
 
-TODO folytatás
++1: a Program() függvényből egy részt kitettem külön függvénybe, IsJoOra néven.
+  Megjegyzés: Általában egy függvény 1 ciklust tartalmaz maximum (nem olyan fontos ökölszabály)
+
+Apró megjegyzések:
+Konvenció=több ekvivalens/hasonló működésű kód között hogyan válasszunk...
+Nyelv-, néha cégfüggő
+  Változónév kisbetűvel, metódusnév, osztály nagybetűvel kezdődik
+  Ezen kívül CamelCase sémának felelnek meg (nem snake_case-nek)
+  Komment nagybetűvel kezdődik, ponttal zárul.
+  IsSomething, GetSomething -> lekérdezés (előbbi bool változó lekérdezésére)
+  SetSomething -> módosítás
+    Ne csináljanak váratlan dolgokat (pl. Get ne módosítson)
+  Angolt/magyart ne vegyítsünk (itt sántít a kód :/ )
+---
+
+Házi:
 
 több házit adok, próbálok a legkönnyebtől fokozatosan nehezedő házikat adni.
 Ezekből egyet, vagy kettőt lehet érdemes csinálni.
 HF1: befejezni a második feladatot. Az első feladat nagyon sok segítséget ad ebben.
 
+HF1b: SzervezoManager osztály létrehozása, ami kezeli valamilyen formában a szervezőket.
+Tanácsok:
+  Nem érdemes egyből beletenni az összes szervezőt. (AddSzervezo használatával lehet újat belerakni)
+  Csak a számunkrw fontos kérdéseket vezessük ki: (IsAllTimeGood, IsEveryoneNeeded)
+
 HF2: Rekonstruálni a lenti kódot. Egy folyamatként mutattam be az OOP lényegét. Vagy a folyamaton végigmenve, vagy csak a végleges kódot rekonstruálni sok hasznot rejthet.
   Pozitívuma, hogy nem lehet nagyon elakadni, végső soron ctrl+c ctrl+v "megoldása" a házinak.
 
-HF3: (ajánlott) Egy, az előzőhöz hasonlót szeretnék adni, amit az előző kód alapján meg lehet oldani.
+HF3: (ajánlott) Egy, az ehhez a feladathoz hasonlót szeretnék adni, amit az előző kód alapján meg lehet oldani.
   TODO
 
-HF4: (előretekintés, utánanézős) interface definiálása, két külön szervező osztály közös használatához.
+HF4: Egy gondolattal bonyolultabb feladat...?
+  TODO
+
+HF5: (előretekintés, utánanézős) interface definiálása, két külön szervező osztály közös használatához.
   Mese: A Szervezo és Szervezo2 ugyanazt a célt szolgálják, mindkettő saját előnyeivel és hátrányaival.
     Mindkettőt ki lehet aknázni: alapvetően használjuk a Szervzo-t, de ha szükség van rá, akkor a Szervezo2-t használjuk.
 
-
 Amikről várhatóan lesz szó köv. alkalommal:
   interfész/implementáció
+  interface (mint kulcsszó)
+  x,y-r,phi
   leszármazás
   OOP ökölszabályok
-
+  property, miért használjuk
+  referencia- vagy értékszerinti átadás?
 */
 using System;
 using System.Collections.Generic;
