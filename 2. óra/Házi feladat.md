@@ -44,12 +44,12 @@ Itt megpróbálok spoiler-eket tenni valami értelmes felirattal, ami alapján �
 
 <details> 
   <summary> Hogyan írjuk ki a "fontos adatait" az alakzatnak? </summary>
-  Készítsünk egy string Stringify() metódust az interfésznek. Ezt kérjük le a következő feladatban.
+  <p>Készítsünk egy string Stringify() metódust az interfésznek. Ezt kérjük le a következő feladatban.</p>
 </details>
 
 <details> 
   <summary> Hogyan olvassunk be lebegőpontos számot? (Ha szeretnénk beolvasni az adatokat) </summary>
-  `double ertek = Convert.ToDouble(Console.Readline());`
+  <pre><code>double ertek = Convert.ToDouble(Console.Readline());</code></pre>
 </details>
 
 ## Szorgalmik
