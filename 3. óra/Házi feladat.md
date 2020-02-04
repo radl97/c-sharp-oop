@@ -1,4 +1,4 @@
-# Házi feladat 3. órára
+# Házi feladat 4. órára
 
 A feladat lényege az interface használatának megértése és begyakorlása.
 Az utóbbi alkalomhoz hasonlóan (Szervezo-nél) a most elkezdett feladatot fogjuk folytatni.
