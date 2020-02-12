@@ -18,8 +18,6 @@ namespace ConsoleApplication1x
         public Kor(double r)
         {
             this.r = r;
-
-            //Math.PI
         }
 
         public double GetKerulet()
